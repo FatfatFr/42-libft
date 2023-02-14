@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 17:28:00 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/14 13:31:25 by fatdiall         ###   ########.fr       */
+/*   Created: 2023/02/01 17:27:01 by fatdiall          #+#    #+#             */
+/*   Updated: 2023/02/13 13:49:35 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	little_len;
+	unsigned int	i;
 
-	little_len = strlen(little);
-	if (little_len == 0)
+	i = 0;
+	while (i < n)
 	{
-		return ((char *)big);
-	}
-	while (*big && len-- >= little_len)
-	{
-		if (*big == *little && strncmp(big, little, little_len) == 0)
+		if (*s1 != *s2)
 		{
-			return ((char *)big);
+			return (*(unsigned char *)(s1) - *(unsigned char *)(s2));
 		}
-		big++;
+		else if (*s1 == *s2)
+		{
+			s1++;
+			s2++;
+		}
+		n--;
 	}
 	return (0);
 }
 
 /*int	main(void)
 {
-	char	big[] = "hellopoupounette";
-	char	little[] = "poun";
-	int	len = 13;
+	char	first[] = "Bonjourno";
+	char	second[] = "Binjour";
 
-	printf("%s\n", ft_strnstr(big, little, len));
+	printf("%d\n", ft_strncmp(first, second, 7));
 	return (0);
 }*/

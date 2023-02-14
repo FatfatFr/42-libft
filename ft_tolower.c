@@ -1,44 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 17:28:00 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/14 13:31:25 by fatdiall         ###   ########.fr       */
+/*   Created: 2023/02/01 17:26:18 by fatdiall          #+#    #+#             */
+/*   Updated: 2023/02/14 16:07:47 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+int	ft_tolower(int c)
 {
-	size_t	little_len;
-
-	little_len = strlen(little);
-	if (little_len == 0)
+	if (c >= 'A' || c <= 'Z')
 	{
-		return ((char *)big);
+		c = c + 32;
 	}
-	while (*big && len-- >= little_len)
-	{
-		if (*big == *little && strncmp(big, little, little_len) == 0)
-		{
-			return ((char *)big);
-		}
-		big++;
-	}
-	return (0);
+	return (c);
 }
 
 /*int	main(void)
 {
-	char	big[] = "hellopoupounette";
-	char	little[] = "poun";
-	int	len = 13;
-
-	printf("%s\n", ft_strnstr(big, little, len));
+	printf("%c\n", ft_tolower('B'));
 	return (0);
 }*/

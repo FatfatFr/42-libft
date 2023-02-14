@@ -1,44 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 17:28:00 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/14 13:31:25 by fatdiall         ###   ########.fr       */
+/*   Created: 2023/02/01 17:26:37 by fatdiall          #+#    #+#             */
+/*   Updated: 2023/02/14 15:35:02 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
-#include <string.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	little_len;
+	char	n;
 
-	little_len = strlen(little);
-	if (little_len == 0)
+	n = c;
+	while (*s != n)
 	{
-		return ((char *)big);
-	}
-	while (*big && len-- >= little_len)
-	{
-		if (*big == *little && strncmp(big, little, little_len) == 0)
+		if (!*s)
 		{
-			return ((char *)big);
+			return (NULL);
 		}
-		big++;
+		s++;
 	}
-	return (0);
+	return ((char *)s);
 }
 
 /*int	main(void)
 {
-	char	big[] = "hellopoupounette";
-	char	little[] = "poun";
-	int	len = 13;
+	char	string[] = "bonjour";
+	int	c = 'c';
 
-	printf("%s\n", ft_strnstr(big, little, len));
+	printf("%s", ft_strchr(string, c));
 	return (0);
 }*/

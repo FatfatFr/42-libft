@@ -1,44 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 17:28:00 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/14 13:31:25 by fatdiall         ###   ########.fr       */
+/*   Created: 2023/02/01 17:27:24 by fatdiall          #+#    #+#             */
+/*   Updated: 2023/02/14 16:28:18 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_memchr(const void *ptr, int value, size_t num) 
 {
-	size_t	little_len;
+	const unsigned char *p = (const unsigned char *)ptr;
 
-	little_len = strlen(little);
-	if (little_len == 0)
+	p = (const unsigned char *)ptr;
+	while (num-- > 0) 
 	{
-		return ((char *)big);
-	}
-	while (*big && len-- >= little_len)
-	{
-		if (*big == *little && strncmp(big, little, little_len) == 0)
+		if (*p++ == (unsigned char)value) 
 		{
-			return ((char *)big);
+			return (void *)(p - 1);
 		}
-		big++;
 	}
-	return (0);
+	return (NULL);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	char	big[] = "hellopoupounette";
-	char	little[] = "poun";
-	int	len = 13;
-
-	printf("%s\n", ft_strnstr(big, little, len));
 	return (0);
-}*/
+}
