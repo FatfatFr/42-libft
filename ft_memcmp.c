@@ -10,26 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num) 
+#include <stdio.h>
+
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n) 
 {
 	const unsigned char *p1;
 	const unsigned char *p2;
 
 	p1 = (const unsigned char *)ptr1;
  	p2 = (const unsigned char *)ptr2;
-	while (num-- > 0) 
+	while (n-- > 0) 
 	{
-		if (*p1++ != *p2++) 
+		if (*p1 != *p2) 
 		{
-			return *(p1 - 1) - *(p2 - 1);
+			return *(p1) - *(p2);
 		}
+		p1++;
+		p2++;
 	}
 	return (0);
 }
 
 int	main(void)
 {
-	char	one[] = "";
-	char	two[] = "";
+	char	one[] = "poupounette";
+	char	two[] = "toutounette";
+
+	printf("%d\n", ft_memcmp(one, two, 5));
 	return (0);
 }
