@@ -13,14 +13,14 @@
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memchr(const void *ptr, int value, size_t num) 
+void	*ft_memchr(const void *ptr, int value, size_t num)
 {
 	const unsigned char *p = (const unsigned char *)ptr;
+  	p = (unsigned char *)ptr;
 
-	p = (const unsigned char *)ptr;
-	while (num-- > 0) 
+	while (num-- > 0)
 	{
-		if (*p++ == (unsigned char)value) 
+		if (*p++ == (unsigned char)value)
 		{
 			return (void *)(p - 1);
 		}
@@ -30,5 +30,7 @@ void	*ft_memchr(const void *ptr, int value, size_t num)
 
 int	main(void)
 {
+	char	ptr[] = "toutounette";
+	printf("%c\n", *(char *)ft_memchr(ptr, 'u', 3));
 	return (0);
 }
