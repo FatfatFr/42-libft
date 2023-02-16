@@ -33,7 +33,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*b;
 
 	b = "Source";
-	ft_memcpy(a, b, 5);
-	printf("%s", a);
+	printf("%p\n", ft_memcpy(a, b, 5));
 	return (0);
 }*/
