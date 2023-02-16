@@ -13,17 +13,20 @@
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memchr(const void *ptr, int value, size_t num)
+void	*ft_memchr(const void *ptr, int c, size_t n)
 {
-	const unsigned char *p = (const unsigned char *)ptr;
-  	p = (unsigned char *)ptr;
-
-	while (num-- > 0)
+	const unsigned char *p = ptr;
+	int	i;
+	
+	i = 0;
+	while (n > i)
 	{
-		if (*p++ == (unsigned char)value)
+		if (*p == (unsigned char)c)
 		{
-			return (void *)(p - 1);
+			return (void *)(p);
 		}
+		p++;
+		n--;
 	}
 	return (NULL);
 }
