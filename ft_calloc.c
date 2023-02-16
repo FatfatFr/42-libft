@@ -1,37 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 16:49:59 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/16 16:22:55 by fatdiall         ###   ########.fr       */
+/*   Created: 2023/02/16 14:52:02 by fatdiall          #+#    #+#             */
+/*   Updated: 2023/02/16 17:59:19 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*str;
+	size_t	total_size;
+	void	*ptr;
 
-	str = s;
-	while (n > 0)
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
+	if (ptr)
 	{
-		*str = c;
-		str++;
-		n--;
+		bzero(ptr, total_size);
 	}
-	return (s);
+	return (ptr);
 }
 
-/*int	main(void) 
+/*int	main(void)
 {
-	char	str[] = "Hello world";
+	int	i;
+	char			*test;
 
-	printf("Before: %s\n",str);
-	ft_memset(str + 6, 42, 5);
-	printf("After: %s\n", str);
-	return(0);
+	i = 0;
+	test = (char *)ft_calloc(5, sizeof(char));
+	if (test)
+	{
+		while (i < 5)
+		{
+			test[i] = 'a';
+			i++;
+		}
+		return (0);
+	}
 }*/
