@@ -39,16 +39,17 @@ void	*ft_memmove(void *dest, const void *src, int n)
 	return (dest);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char	source[] = "source";
 	char	dest[] = "thedest";
 
 	ft_memmove(dest, source, 5);
 	printf("%s\n", dest);
+	return (0);
 }
 
-When memories overlap, the function memmove handles the overlapping
+/*When memories overlap, the function memmove handles the overlapping
 
 char	str[100] = "Learningisfun";
 char	*first, *second;
