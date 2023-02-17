@@ -6,11 +6,9 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:27:01 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/13 13:49:35 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:04:27 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

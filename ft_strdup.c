@@ -6,12 +6,10 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 14:36:47 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/16 17:57:31 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:22:17 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 int	ft_strlcpy(char *dest, const char *src, int n)

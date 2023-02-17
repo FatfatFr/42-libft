@@ -6,9 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:25:31 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/11 17:53:01 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:36:39 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -16,8 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	src_len;
 	int		i;
 
-	dst_len = strlen(dest);
-	src_dest = strlen(src);
+	dst_len = ft_strlen(dest);
+	src_dest = ft_strlen(src);
 	i = 0;
 	if (size == 0)
 	{

@@ -6,29 +6,32 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:27:24 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/15 17:53:23 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:06:17 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-void	*ft_memchr(const void *ptr, int value, size_t num)
+void	*ft_memchr(const void *ptr, int value, size_t n)
 {
-	const unsigned char	*p = (const unsigned char *)ptr;
+	const unsigned char	*p = ptr;
+	int					i;
 
-	p = (const unsigned char *)ptr;
-	while (num-- > 0)
+	i = 0;
+	while (n > i)
 	{
-		if (*p++ == (unsigned char)value)
+		if (*p == (unsigned char)value)
 		{
-			return ((void *)(p - 1));
+			return ((void *)p);
 		}
+		n--;
+		p++;
 	}
 	return (NULL);
 }
 
 /*int	main(void)
 {
+	char	first[] = "toutounette";
+
+	printf("%c\n", *(char *)memchr(first, 't', 3));
 	return (0);
 }*/

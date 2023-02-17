@@ -6,16 +6,18 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:51:35 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/11 16:50:24 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:31:34 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlcpy(char *dest, const char *src, int n)
 {
 	int	src_len;
 	int	i;
 
-	src_len = strlen(src);
+	src_len = ft_strlen(src);
 	i = 0;
 	if (n > 0)
 	{	

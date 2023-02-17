@@ -6,12 +6,9 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:28:15 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/14 15:33:33 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:06:55 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {

@@ -6,12 +6,9 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:26:18 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/14 16:07:47 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:38:31 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_tolower(int c)
 {

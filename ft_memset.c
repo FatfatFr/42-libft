@@ -6,11 +6,9 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:49:59 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/16 16:22:55 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:05:20 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

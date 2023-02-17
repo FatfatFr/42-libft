@@ -6,13 +6,15 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:50:22 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/09 13:35:27 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:28:23 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
-	memset(s, '0', n);
+	ft_memset(s, '0', n);
 }
 
 /*int	main(void)

@@ -6,13 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 14:52:02 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/16 17:59:19 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:21:32 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <strings.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

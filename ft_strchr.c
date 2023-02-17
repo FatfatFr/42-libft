@@ -6,10 +6,9 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:26:37 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/14 15:35:02 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:03:56 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {

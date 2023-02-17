@@ -6,15 +6,17 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:31:24 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/12 17:12:00 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:40:03 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strrchr(const char *s, int c)
 {
 	int	len;
 
-	len = strlen(s);
+	len = ft_strlen(s);
 	while (len >= 0)
 	{
 		if (s[len] == (char)c)
