@@ -18,8 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	src_len;
 	int		i;
 
-	dst_len = ft_strlen(dest);
-	src_dest = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	i = 0;
 	if (size == 0)
 	{
@@ -38,14 +38,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dst_len + src_len);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char	source[] = "functions";
-	char	dest[5];
+	char	dest[] = "variables";
 	size_t	size = 16;
 	int	n = sizeof(dest);
 	int	len = ft_strlcat(dest, source, size);
 
 	printf("%u\n", len);
 	return (0);
-}*/
+}

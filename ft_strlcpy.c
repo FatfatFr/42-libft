@@ -31,7 +31,7 @@ int	ft_strlcpy(char *dest, const char *src, int n)
 	return (src_len);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char	source[] = "functions";
 	char	dest[5];
@@ -40,4 +40,4 @@ int	ft_strlcpy(char *dest, const char *src, int n)
 
 	printf("%u\n", len);
 	return (0);
-}*/
+}
