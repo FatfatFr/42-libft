@@ -11,17 +11,42 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-
-char	*ft_strjoin(char const *s1, char const *s2)
+static char    *fill_join(char *dst, char const *s2, unsigned int i, char *tmp)
 {
-	char	*newstring;
+    size_t            len;
+    unsigned int    j;
 
-	newstring = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2)));
-	if (!newstring)
-	{
-		return (NULL);
-	}
+    len = strlen(tmp);
+    j = 0;
+    while (j < len)
+    {
+        dst[i] = tmp[j];
+        i++;
+        j++;
+    }
+    if (tmp == s2)
+        return (dst);
+    return (fill_join(dst, s2, i, (char *)s2));
+}
+
+char    *ft_strjoin(char const *s1, char const *s2)
+{
+    size_t            size;
+    char            *join;
+    unsigned int    i;
+
+    if (!s1 || !s2)
+        return (NULL);
+    size = strlen(s1) + strlen(s2);
+    join = calloc(1, size + 1);
+    if (!join)
+        return (NULL);
+    i = 0;
+    fill_join(join, s2, i, (char *)s1);
+    return (join);
 }
 
 int	main(void)
@@ -29,8 +54,8 @@ int	main(void)
 	char	first[] = "first";
 	char	second[] = "second";
 
-	char *functrjoin= ft_strjoin(s1, s2);
-	print("%s\n", funcstrjoin);
+	char *funcstrjoin= ft_strjoin(first, second);
+	printf("%s\n", funcstrjoin);
 	return (0);
 }
 
