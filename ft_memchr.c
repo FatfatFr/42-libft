@@ -6,9 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:27:24 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/17 13:06:17 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/21 10:26:21 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 void	*ft_memchr(const void *ptr, int value, size_t n)
 {
@@ -32,6 +34,6 @@ void	*ft_memchr(const void *ptr, int value, size_t n)
 {
 	char	first[] = "toutounette";
 
-	printf("%c\n", *(char *)memchr(first, 't', 3));
+	printf("%p\n", ft_memchr(first, 't', sizeof(first)));
 	return (0);
 }*/

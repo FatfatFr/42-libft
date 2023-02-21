@@ -1,43 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 16:51:35 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/20 10:17:44 by fatdiall         ###   ########.fr       */
+/*   Created: 2023/02/21 11:49:23 by fatdiall          #+#    #+#             */
+/*   Updated: 2023/02/21 12:20:10 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	src_len;
-	int	i;
+	char	*newstring;
 
-	src_len = ft_strlen(src);
-	i = 0;
-	if (size > 0)
-	{	
-		while (i < size - 1 && src[i])
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}	
-	return (src_len);
+	newstring = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2)));
+	if (!newstring)
+	{
+		return (NULL);
+	}
 }
 
-/*int	main(void)
+int	main(void)
 {
-	char	source[] = "functions";
-	char	dest[5];
-	int	n = sizeof(dest);
-	int	len = ft_strlcpy(dest, source, n);
+	char	first[] = "first";
+	char	second[] = "second";
 
-	printf("%u\n", len);
+	char *functrjoin= ft_strjoin(s1, s2);
+	print("%s\n", funcstrjoin);
 	return (0);
-}*/
+}
+
+//output
+//firstsecond

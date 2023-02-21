@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:25:31 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/17 15:36:39 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/20 10:18:24 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dst_len + src_len);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	source[] = "functions";
-	char	dest[] = "variables";
+	char	dest[5];
 	size_t	size = 16;
 	int	n = sizeof(dest);
 	int	len = ft_strlcat(dest, source, size);
 
 	printf("%u\n", len);
 	return (0);
-}
+}*/
