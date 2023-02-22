@@ -24,11 +24,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t		i;
 
 	i = 0;
-	if (!s || len < 0)
+	if (!s)
 	{
 		return (NULL);
 	}
-	if (start >= strlen(s))
+	if (start > strlen(s))
 	{
 		return (NULL);
 	}
@@ -50,13 +50,10 @@ int	main(void)
 {
 	char	test[] = "poupounette";
 
-	printf("%s\n", ft_substr(test, 3, 20));
+	char* funcsubstr = ft_substr(test, 3, 20);
+	printf("%s\n", funcsubstr);
 	return (0);
 }
 
 //output 
 // pounette
-// char *substr = ft_substr(test, 4, 20);
-// printf("%s\n", substr)
-// i ipour le nombre de caracteres copies
-// s[start + i] != '\0'

@@ -6,50 +6,41 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 11:49:23 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/21 12:20:10 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:48:39 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 
-static char    *fill_join(char *dst, char const *s2, unsigned int i, char *tmp)
+// si s1 ou s2 inexistant
+// malloc = tailles s1 + s2
+//
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    size_t            len;
-    unsigned int    j;
+	int	lens1;
+	int	lens2;
+	char			*join;
 
-    len = strlen(tmp);
-    j = 0;
-    while (j < len)
-    {
-        dst[i] = tmp[j];
-        i++;
-        j++;
-    }
-    if (tmp == s2)
-        return (dst);
-    return (fill_join(dst, s2, i, (char *)s2));
+	lens1 = strlen(s1);
+	lens2 = strlen(s2);
+	if (!s1 || !s2)
+	{
+		return (0);
+	}
+	join = calloc(1, lens1 + lens2 + 1);
+	if (!join)
+	{
+		return (0);
+	}
+	memcpy(join, s1, lens1);
+	memcpy(join + lens1, s2, lens2);
+	return (join);
 }
 
-char    *ft_strjoin(char const *s1, char const *s2)
-{
-    size_t            size;
-    char            *join;
-    unsigned int    i;
-
-    if (!s1 || !s2)
-        return (NULL);
-    size = strlen(s1) + strlen(s2);
-    join = calloc(1, size + 1);
-    if (!join)
-        return (NULL);
-    i = 0;
-    fill_join(join, s2, i, (char *)s1);
-    return (join);
-}
-
-int	main(void)
+/*int	main(void)
 {
 	char	first[] = "first";
 	char	second[] = "second";
@@ -57,7 +48,6 @@ int	main(void)
 	char *funcstrjoin= ft_strjoin(first, second);
 	printf("%s\n", funcstrjoin);
 	return (0);
-}
-
+}*/
 //output
 //firstsecond
