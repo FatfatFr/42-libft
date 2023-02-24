@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 14:33:36 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/21 12:11:18 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/23 10:36:17 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	test[] = "poupounette";
 
 	char* funcsubstr = ft_substr(test, 3, 20);
 	printf("%s\n", funcsubstr);
 	return (0);
-}
+}*/
 
 //output 
 // pounette

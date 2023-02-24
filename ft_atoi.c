@@ -6,33 +6,35 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:28:15 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/17 13:06:55 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/02/23 10:35:33 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+#include <stdio.h>
+
+int	ft_atoi(const char *nptr)
 {
 	int	alpha;
 	int	beta;
 
 	alpha = 0;
 	beta = 1;
-	while ((*str >= 9 && *str <= 13) || (*str == ' '))
+	while ((*nptr >= 9 && *nptr <= 13) || (*nptr == ' '))
 	{
-		str++;
+		nptr++;
 	}
-	if (*str == '-')
+	if (*nptr == '-')
 	{
 		beta *= -1;
-		str++;
+		nptr++;
 	}
-	else if (*str == '+')
+	else if (*nptr == '+')
 	{
-		str++;
+		nptr++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		alpha = alpha * 10 + *str++ - 48;
+		alpha = alpha * 10 + *nptr++ - 48;
 	}
 	return (alpha * beta);
 }
@@ -41,6 +43,6 @@ int	ft_atoi(const char *str)
 {  
  	char	str[] = "012345";
 
-	printf("%d\n", atoi(str) + 1);
+	printf("%d\n", ft_atoi(str) + 1);
 	return (0);
 }*/
