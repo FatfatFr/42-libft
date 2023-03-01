@@ -15,6 +15,20 @@
 #include <string.h>
 #include <stdlib.h>
 
+int	ft_toupper(int c)
+{
+	if (c >= 'a' || c <= 'z')
+	{
+		c = c - 32;
+	}
+	return (c);
+}
+
+char	ft_toupper2(unsigned int i, char c)
+{
+	return (ft_toupper(c));
+}
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int	s_len;
@@ -32,28 +46,24 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	{
 		return(NULL);
 	}
-	while (string[i] != '\0')
+	while (s[i] != '\0')
 	{
 		string[i] = f(i, s[i]);
-		i++;	
+		i++;
 	}
-	string[i] = '\0';
+  string[i] = '\0';
 	return (string);
 }
 
-
 int	main(void)
 {
-	char	test [] = "hello";
-	int	i;
+	const char	test [] = "hello";
+	char	*result;
 
-	i = 0;
-	while (test[i] != '\0')
-	{
-		printf("%s\n", ft_strmapi(test, toupper(test[i])));
-		i++;
-	}
+	result = ft_strmapi(test, ft_toupper2);
+	printf("%s\n", result);
+	free(result);
+	return (0);
 }
 //output
 //HELLO
-
