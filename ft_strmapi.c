@@ -65,5 +65,3 @@ int	main(void)
 	free(result);
 	return (0);
 }
-//output
-//HELLO
