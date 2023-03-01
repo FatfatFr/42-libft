@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 09:47:33 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/28 11:03:12 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/01 16:27:11 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ char	ft_toupper2(unsigned int i, char c)
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	unsigned int		i;
 	int	s_len;
-  	char	*string;
-	unsigned int	i;
+	char	*string;
 
 	i = 0;
 	s_len = strlen(s);
@@ -44,18 +44,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	string = (char *)malloc(s_len + 1);
 	if (!string)
 	{
-		return(NULL);
+		return (NULL);
 	}
 	while (s[i] != '\0')
 	{
 		string[i] = f(i, s[i]);
 		i++;
 	}
-  string[i] = '\0';
+	string[i] = '\0';
 	return (string);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	const char	test [] = "hello";
 	char	*result;
@@ -64,4 +64,4 @@ int	main(void)
 	printf("%s\n", result);
 	free(result);
 	return (0);
-}
+}*/

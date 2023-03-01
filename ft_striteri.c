@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 09:29:32 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/01 16:28:20 by fatdiall         ###   ########.fr       */
+/*   Created: 2023/03/01 16:57:09 by fatdiall          #+#    #+#             */
+/*   Updated: 2023/03/01 18:37:22 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
+#include <ctype.h>
+#include <stdlib.h>
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	write(fd, &c, 1);
+	unsigned int	i;
+
+	if (s == NULL || f == NULL)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
 /*int	main(void)
 {
-	char *test = "l";
-	int	i;
-	
-	i = 1;
-	ft_putchar_fd(test[0], i);
-	return (0);
+        const char	test [] = "hello";
+        char	*result;
+
+        result = ft_striteri(test, ft_toupper2);
+        printf("%s\n", result);
+        return (0);
 }*/
