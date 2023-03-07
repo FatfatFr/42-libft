@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:51:35 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/20 10:17:44 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/07 15:45:04 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	src_len;
-	int	i;
+	size_t		i;
+	int			src_len;
 
 	src_len = ft_strlen(src);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 14:33:36 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/23 10:36:17 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/06 15:17:26 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	if (!s)

@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:27:54 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/03 18:36:05 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/04 17:49:50 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 
 /*int	main(void)
 {
-	char	test[] = "la maison est belle";
+	char	test[] = "le chat noir";
 	char	space = ' ';
 	char	**result;
 	int	i;
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 	result = ft_split(test, space);
 	while (result[i])
 	{
-		printf("%s", result[i]);
+		printf("%s\n", result[i]);
 		i++;
 	}
 	free (result);

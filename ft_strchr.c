@@ -6,9 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:26:37 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/23 10:14:59 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/07 15:53:02 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

@@ -6,15 +6,17 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:50:42 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/23 13:10:04 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:28:44 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	unsigned const char	*s;
-	int					i;
+	size_t				i;
 
 	d = dest;
 	s = src;
@@ -27,7 +29,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (d);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	a[100];
 	char	*b;
@@ -38,4 +40,4 @@ int	main(void)
 	return (0);
 }
 
-//output : Sourc
+//output : Sourc*/

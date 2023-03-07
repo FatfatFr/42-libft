@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 09:47:33 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/01 16:27:11 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/06 15:13:25 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ char	ft_toupper2(unsigned int i, char c)
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int		i;
-	int	s_len;
 	char	*string;
+	int		i;
+	int		s_len;
 
 	i = 0;
 	s_len = strlen(s);

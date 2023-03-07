@@ -6,11 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:28:15 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/23 10:35:33 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:27:34 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

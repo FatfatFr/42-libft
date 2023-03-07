@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 11:49:23 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/22 17:48:39 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/06 14:57:52 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	lens1;
-	int	lens2;
-	char			*join;
+	char	*join;
+	int		lens1;
+	int		lens2;
 
 	lens1 = strlen(s1);
 	lens2 = strlen(s2);

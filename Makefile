@@ -4,16 +4,19 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 
 OBJ = ${SRC:.c=.o}
 
-all: $(NAME)
-     # ar -rc $(NAME) $(OBJ)
+CFLAGS = -Wall -Wextra -Werror
 
-$(NAME):
-     gcc -Wall -Wextra -Werror -c $(SRC)
+CC = gcc
+
+$(NAME): $(OBJ)
+	ar -rc $(NAME) $(OBJ)
+
+all: $(NAME)
  
 clean:
-     rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-     rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

@@ -6,12 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 14:52:02 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/23 10:28:39 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:40:12 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -26,7 +25,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	if (ptr)
 	{
-		bzero(ptr, total_size);
+		ft_bzero(ptr, total_size);
 	}
 	return (ptr);
 }

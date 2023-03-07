@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:51:12 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/09 14:56:25 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/07 15:36:37 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@ void	*ft_memmove(void *dest, const void *src, int n)
 {
 	const unsigned char	*ptrs;
 	unsigned char		*ptrd;
-	int					i;
 
 	ptrs = src;
 	ptrd = dest;
