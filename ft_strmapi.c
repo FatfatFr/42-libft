@@ -6,16 +6,13 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 09:47:33 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/06 15:13:25 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/07 18:04:02 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+/*int	ft_toupper(int c)
 {
 	if (c >= 'a' || c <= 'z')
 	{
@@ -27,7 +24,7 @@ int	ft_toupper(int c)
 char	ft_toupper2(unsigned int i, char c)
 {
 	return (ft_toupper(c));
-}
+}*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
