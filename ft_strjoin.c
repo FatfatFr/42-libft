@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 11:49:23 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/07 18:19:31 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/08 11:23:50 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(join + lens1, s2, lens2);
 	return (join);
 }
-
 
 /*int	main(void)
 {

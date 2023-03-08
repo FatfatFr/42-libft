@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:12:15 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/06 15:38:52 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/08 18:49:14 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ void	ft_putnbr_fd(int n, int fd)
 		return ;
 	}
 	if (n < 0)
-	{
+	{	n = -n;
 		write(fd, "-", 1);
-		n = -n;
 	}
 	if (n > 9)
 	{
@@ -34,10 +33,10 @@ void	ft_putnbr_fd(int n, int fd)
 	write(fd, &c, 1);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	int	n = 17;
 	int	i;
 	i = 1;
 	ft_putnbr_fd(n, i);
-}*/
+}
