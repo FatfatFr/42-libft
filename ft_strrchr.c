@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:31:24 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/17 15:40:03 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/12 16:48:25 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_strrchr(const char *s, int c)
 	char	string[] = "Bonjourno";
 	int	c = 'n';
 
-	printf("%s", strrchr(string, c));
+	printf("%s", ft_strrchr(string, c));
 	return (0);
 }*/

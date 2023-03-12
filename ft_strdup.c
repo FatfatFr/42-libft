@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 14:36:47 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/02/21 11:23:07 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/12 16:05:41 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 	int	src_len;
 	int	i;
 
-	src_len = strlen(src);
+	src_len = ft_strlen(src);
 	i = 0;
 	if (n > 0)
 	{
@@ -40,7 +40,7 @@ char	*ft_strdup(const char *s)
 	{
 		return (NULL);
 	}
-	ft_strlcpy(result, s, strlen(s) + 1);
+	ft_strlcpy(result, s, ft_strlen(s) + 1);
 	return (result);
 }
 

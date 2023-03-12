@@ -6,14 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:27:54 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/04 17:49:50 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/12 14:16:42 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 static int	ft_count_words(char const *s, char c)
 {
@@ -31,9 +28,22 @@ static int	ft_count_words(char const *s, char c)
 		if (s[i])
 			word++;
 		while (s[i] && (s[i] != c))
-			i++;
+		i++;
 	}
 	return (word);
+}
+
+static int	ft_word_len(char const *s, char c, int i)
+{
+	int	len;
+
+	len = 0;
+	while (s[i] && s[i] != c)
+	{
+	i++;
+	len++;
+	}
+	return (len);
 }
 
 char	**ft_split(char const *s, char c)
@@ -56,7 +66,7 @@ char	**ft_split(char const *s, char c)
 		k = 0;
 		while (s[j] == c)
 			j++;
-		tab[i] = malloc(sizeof(char) * (strlen(s) + 1));
+		tab[i] = malloc(sizeof(char) * (ft_word_len(s, c, j) + 1));
 		while (s[j] && (s[j] != c))
 			tab[i][k++] = s[j++];
 		tab[i][k] = '\0';
