@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 14:33:36 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/08 18:04:49 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:38:26 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		return (NULL);
 	}
-	if (start > strlen(s))
+	if (start > ft_strlen(s))
 	{
 		substring = malloc(1);
 		*substring = '\0';
@@ -48,6 +48,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	printf("%s\n", funcsubstr);
 	return (0);
 }*/
-
-//output 
-// pounette

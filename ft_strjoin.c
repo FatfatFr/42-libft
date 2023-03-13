@@ -6,15 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 11:49:23 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/08 11:23:50 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:39:21 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// si s1 ou s2 inexistant
-// malloc = tailles s1 + s2
-//
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -22,8 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		lens1;
 	int		lens2;
 
-	lens1 = strlen(s1);
-	lens2 = strlen(s2);
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
 	if (!s1 || !s2)
 	{
 		return (NULL);
@@ -47,5 +43,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	printf("%s\n", funcstrjoin);
 	return (0);
 }*/
-//output
-//firstsecond

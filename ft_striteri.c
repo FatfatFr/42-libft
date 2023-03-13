@@ -6,14 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 16:57:09 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/01 18:37:22 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/13 15:00:41 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <ctype.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

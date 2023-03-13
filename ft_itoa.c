@@ -6,13 +6,11 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 16:29:55 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/01 16:54:15 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:33:39 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>    
+#include "libft.h"
 
 static int	ft_itoa_len(int n)
 {
@@ -38,16 +36,15 @@ static char	*ft_itoa_string(int n, int len)
 {
 	char	*result;
 
-	result = calloc(len + 1, sizeof(*result));
+	result = ft_calloc(len + 1, sizeof(char));
 	if (!result)
 		return (NULL);
 	if (n == 0)
 		result[0] = '0';
-	result[len] = '\0';
 	if (n < 0)
 	{
 		result[0] = '-';
-		n = -n;
+		n *= -1;
 	}
 	len--;
 	while (n > 0)
@@ -64,7 +61,7 @@ char	*ft_itoa(int n)
 	int	len;
 
 	if (n == -2147483648)
-		return (strdup("-2147483648"));
+		return (ft_strdup("-2147483648"));
 	len = ft_itoa_len(n);
 	return (ft_itoa_string(n, len));
 }

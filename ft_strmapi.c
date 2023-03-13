@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 09:47:33 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/07 18:04:02 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:40:12 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		s_len;
 
 	i = 0;
-	s_len = strlen(s);
+	s_len = ft_strlen(s);
 	if (!s || !f)
 	{
 		return (NULL);

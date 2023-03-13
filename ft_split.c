@@ -6,7 +6,7 @@
 /*   By: fatdiall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:27:54 by fatdiall          #+#    #+#             */
-/*   Updated: 2023/03/12 14:16:42 by fatdiall         ###   ########.fr       */
+/*   Updated: 2023/03/13 16:01:56 by fatdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_count_words(char const *s, char c)
 		if (s[i])
 			word++;
 		while (s[i] && (s[i] != c))
-		i++;
+			i++;
 	}
 	return (word);
 }
@@ -40,8 +40,8 @@ static int	ft_word_len(char const *s, char c, int i)
 	len = 0;
 	while (s[i] && s[i] != c)
 	{
-	i++;
-	len++;
+		i++;
+		len++;
 	}
 	return (len);
 }
